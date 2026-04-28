@@ -1,0 +1,333 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "27a7d355",
+   "metadata": {},
+   "source": [
+    "Create an empty set and add 5 elements using only set methods."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "21d7ffc8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{40, 10, 50, 20, 30}\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_set = set()\n",
+    "\n",
+    "my_set.add(10)\n",
+    "my_set.add(20)\n",
+    "my_set.add(30)\n",
+    "my_set.add(40)\n",
+    "my_set.add(50)\n",
+    "\n",
+    "print(my_set)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1e1d8e90",
+   "metadata": {},
+   "source": [
+    "Remove an element from a set using .remove() and try removing a non-existing element using .discard()."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "ed171121",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 2, 4}\n",
+      "{1, 2, 4}\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = {1, 2, 3, 4}\n",
+    "\n",
+    "s.remove(3)\n",
+    "print(s)\n",
+    "\n",
+    "s.discard(10)  # no error even if element not exists\n",
+    "print(s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7aaec8ae",
+   "metadata": {},
+   "source": [
+    "Create a set and make a copy using .copy(). Then modify the original set."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "1fb96060",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original: {1, 2, 3, 4}\n",
+      "Copy: {1, 2, 3}\n"
+     ]
+    }
+   ],
+   "source": [
+    "original = {1, 2, 3}\n",
+    "\n",
+    "copy_set = original.copy()\n",
+    "\n",
+    "original.add(4)\n",
+    "\n",
+    "print(\"Original:\", original)\n",
+    "print(\"Copy:\", copy_set)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b74d7fa9",
+   "metadata": {},
+   "source": [
+    "Create a set and remove all elements using .clear()."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "925e6f63",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "set()\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = {1, 2, 3, 4}\n",
+    "\n",
+    "s.clear()\n",
+    "print(s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f462cf7f",
+   "metadata": {},
+   "source": [
+    "Check whether a given element exists in a set."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "199b92a7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = {10, 20, 30}\n",
+    "\n",
+    "print(20 in s)\n",
+    "print(50 in s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "122fa7f1",
+   "metadata": {},
+   "source": [
+    " Intermediate Level\n",
+    "\n",
+    "Combine two sets using .union()."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "fb21ddda",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 2, 3, 4, 5}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = {1, 2, 3}\n",
+    "b = {3, 4, 5}\n",
+    "\n",
+    "print(a.union(b))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2a7670db",
+   "metadata": {},
+   "source": [
+    "Find common elements between two sets using .intersection()."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "1a15b990",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{2, 3}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = {1, 2, 3}\n",
+    "b = {2, 3, 4}\n",
+    "\n",
+    "print(a.intersection(b))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "06ddd53e",
+   "metadata": {},
+   "source": [
+    "Find elements present in one set but not in another using .difference()."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "7f927d4e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = {1, 2, 3}\n",
+    "b = {2, 3, 4}\n",
+    "\n",
+    "print(a.difference(b))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "688ffd85",
+   "metadata": {},
+   "source": [
+    "Find non-common elements between two sets using .symmetric_difference()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "6690c174",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 4}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = {1, 2, 3}\n",
+    "b = {2, 3, 4}\n",
+    "\n",
+    "print(a.symmetric_difference(b))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "365c5028",
+   "metadata": {},
+   "source": [
+    "Add elements of one set into another using .update()."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "631d1f56",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 2, 3, 4, 5, 6}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = {1, 2, 3}\n",
+    "b = {4, 5, 6}\n",
+    "\n",
+    "a.update(b)\n",
+    "print(a)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
